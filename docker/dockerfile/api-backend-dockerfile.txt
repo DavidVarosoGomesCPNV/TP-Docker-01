@@ -1,0 +1,7 @@
+FROM python:3
+WORKDIR /usr/src/app
+COPY ./api.py .
+RUN pip install requests flask
+#pip:3 ?
+EXPOSE 8001
+CMD [ "python", "./api.py" ]
